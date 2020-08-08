@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+
+<body class="container" style="background-color:#f3f3f4">
+        <h2 class="text-center">Hola bienvenidos a mi formulario</h2>
+        <br>
+        <form action="" method="" id="formulario" class="mx-auto rounded shadow p-4 mb-4 bg-white" style="width: 400px;">
+            <p class="text-center">Llena este formulario con tus datos</p>
+            <hr>
+            <div class="form-group">
+                <label class="labels" for="">Nombre(s):</label>
+                <input id="error_nombre" class="form-control"  type="text" name="nombre">
+                <div id="err_nom"></div>
+            </div>  
+            <div class="form-group ">
+                <label class="labels" for="">Apellido paterno:</label>
+                <input class="form-control" id="error_ap_pat" type="text" name="ap_pat">
+                <div id="msgError_ap_pat"></div>
+            </div>
+            <div class="form-group ">
+                <label class="labels" for="">Apellido materno:</label>
+                <input class="form-control" id="error_ap_mat" type="text" name="ap_mat">
+                <div id="msgError_ap_mat"></div>
+            </div>
+            <div class="form-group">
+                <label class="labels" for="sexo">Sexo:</label>
+                <select class="form-control" id="error_sexo" name="sexo">
+                  <option></option>
+                  <option>Masculino</option>
+                  <option>Femenino</option>
+                </select>
+                <div id="msgError_sexo"></div>
+              </div>
+            <div class="form-group ">
+                <label class="labels" for="">Numero de telefono:</label>
+                <input class="form-control" id="error_num" type="number" name="num_tel">
+                <div id="msgError_num"></div>
+            </div>
+            <div class="form-group ">
+                <label class="labels" for="">Fecha de nacimiento:</label>
+                <input class="form-control" id="error_fech" type="date" name="fech_naci">
+                <div id="msgError_fech"></div>
+            </div>
+            <div class="form-group" id="alerta_error"></div>
+
+            <div class="mx-auto margin" style="width: 200px;">
+                <button type="submit" class="btn btn-info mx-auto">Guardar informacion</button>
+                <input class="btn btn-primary" id="reset" type="reset" value="Reset">
+            </div>
+        </form>
+    
+    <script src="validar.js"></script>
+</body>
+</html>
